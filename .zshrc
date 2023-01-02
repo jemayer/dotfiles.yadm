@@ -112,7 +112,7 @@ export EDITOR='vim'
 # Set directory colors to match solarized
 
 if [ -x /usr/bin/dircolors ]; then
-		export LSCOLORS='gxfxbEaEBxxEhEhBaDaCaD'
+    export LSCOLORS='gxfxbEaEBxxEhEhBaDaCaD'
     eval "`dircolors -b`"
     alias ls='ls --color=auto'
     alias grep='grep --color=auto'
@@ -144,7 +144,7 @@ if [ $(uname) = "Darwin" ] ; then
     # colors are configured through the LSCOLORS environment variable
     # (built-in defaults are used if this variable is not set).
     export CLICOLOR=1
-		export LSCOLORS='gxfxbEaEBxxEhEhBaDaCaD'
+    export LSCOLORS='gxfxbEaEBxxEhEhBaDaCaD'
 
     # Color grep for OSX.
     alias grep='GREP_COLOR="1;37;41" LANG=C grep --color=auto'
