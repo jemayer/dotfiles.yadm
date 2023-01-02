@@ -1,0 +1,12 @@
+# Vim Python Mode #
+###################
+.ropeproject
+
+# Vim file history #
+# ##################
+.netrwhist
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
