@@ -1,0 +1,3 @@
+[submodule "/home/coma/.tmux/plugins/tpm"]
+	path = /home/coma/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
