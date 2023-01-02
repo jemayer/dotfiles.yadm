@@ -30,6 +30,9 @@
 [push]
 		  default = tracking
 
+[pull]
+	ff = only
+
 [alias]
 		  changes=diff --name-status -r
 		  st = status
@@ -47,5 +50,3 @@
 
 [rerere]
 		  enabled = 1
-
-# vim: set ts=4 sts=4 sw=4 noet:
