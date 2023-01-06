@@ -10,8 +10,7 @@ cd "$HOME"
 if [ ! -d "$HOME/.oh-my-zsh" ] ; then
 
   echo "💿 Installing oh-my-zsh now…"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  exit
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 fi
 
