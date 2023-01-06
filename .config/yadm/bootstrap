@@ -7,6 +7,13 @@ system_type=$(uname -s)
 # be run from within $HOME (assuming this is the root of your dotfiles)
 cd "$HOME"
 
+if [ ! -d "$HOME/.oh-my-zsh" ] ; then
+
+  echo "💿 Installing oh-my-zsh now…"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+fi
+
 echo "💿 Initializing submodules…"
 yadm submodule update --recursive --init
 
