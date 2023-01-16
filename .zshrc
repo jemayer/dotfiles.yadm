@@ -137,6 +137,12 @@ if [ -x /usr/bin/snap ]; then
     export PATH
 fi
 
+# Respect local Go installations
+if [ -d /usr/local/go ]; then
+    path+=('/usr/local/go/bin')
+    export PATH
+fi
+
 # MacOS specific aliases
 if [ $(uname) = "Darwin" ] ; then
     # On FreeBSD and Mac OS X, ls shows colors if the CLICOLOR environment
