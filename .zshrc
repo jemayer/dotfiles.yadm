@@ -143,6 +143,12 @@ if [ -d /usr/local/go ]; then
     export PATH
 fi
 
+# Respect local path
+if [ -d $HOME/.local/bin ]; then
+    path+=("$HOME/.local/bin")
+    export PATH
+fi
+
 # MacOS specific aliases
 if [ $(uname) = "Darwin" ] ; then
     # On FreeBSD and Mac OS X, ls shows colors if the CLICOLOR environment
