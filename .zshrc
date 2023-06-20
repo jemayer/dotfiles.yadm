@@ -154,9 +154,6 @@ if [ -d $HOME/.nvm ]; then
     export NVM_DIR="$HOME/.nvm"
 fi
 
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 # MacOS specific aliases
 if [ $(uname) = "Darwin" ] ; then
     # On FreeBSD and Mac OS X, ls shows colors if the CLICOLOR environment
@@ -184,6 +181,10 @@ if [ $(uname) = "Darwin" ] ; then
     # Show/Hide desktop icons
     alias showicons='defaults write com.apple.finder CreateDesktop true; killall Finder'
     alias hideicons='defaults write com.apple.finder CreateDesktop false; killall Finder'
+
+    # Homebrew specific NVM sheenanigans
+    [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+    [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi
 
 # Include machine specific aliases
