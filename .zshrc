@@ -149,6 +149,14 @@ if [ -d $HOME/.local/bin ]; then
     export PATH
 fi
 
+# NVM
+if [ -d $HOME/.nvm ]; then
+    export NVM_DIR="$HOME/.nvm"
+fi
+
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 # MacOS specific aliases
 if [ $(uname) = "Darwin" ] ; then
     # On FreeBSD and Mac OS X, ls shows colors if the CLICOLOR environment
