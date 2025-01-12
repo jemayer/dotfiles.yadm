@@ -11,6 +11,8 @@ if [ ! -d "$HOME/.oh-my-zsh" ] ; then
 
   echo "💿 Installing oh-my-zsh now…"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  echo "💿 Linking customized Robby Russsell ZSH theme…"
+  ln -s "$HOME/.config/yadm/robbyrussell.zsh-theme" "$HOME/.oh-my-zsh/custom/themes"
 
 fi
 
