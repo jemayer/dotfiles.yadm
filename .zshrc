@@ -183,7 +183,13 @@ if [ $(uname) = "Darwin" ] ; then
     # Show/Hide desktop icons
     alias showicons='defaults write com.apple.finder CreateDesktop true; killall Finder'
     alias hideicons='defaults write com.apple.finder CreateDesktop false; killall Finder'
-fi
+
+    # Python (Homebrew)
+    [ -d "$(brew --prefix)/opt/python@3/libexec/bin" ] && path+=("$(brew --prefix)/opt/python@3/libexec/bin")
+
+ fi
 
 # Include machine specific aliases
 [ -f ~/.aliases_local ] && source ~/.aliases_local
+
+
